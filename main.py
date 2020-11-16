@@ -260,7 +260,7 @@ while 1:
             population.clear()
             best = Element()                                    # jedinec s najviac najvacim fitness
             grid = load_map(answer)                             # nacitanie udajov zo suboru do mapy
-            init_population(NUM_OF_CELLS)                       # inicializacia populacie
+            init_population(NUM_OF_CELLS)                       # inicializacia populacie, argument <= NUM_OF_CELLS
             print('Zadajte sposob vyberu rodicov pre nove generacie\nRuleta = r\nTurnaj = t')
             selection_method = input()
             while selection_method not in {'r', 't'}:
