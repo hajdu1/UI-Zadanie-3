@@ -1,7 +1,7 @@
-from random import *            # pre generovanie nahodnych hodnot z intervalov
-from numpy import *             # pre natypovanie buniek jedincov na uint8
-from copy import *              # vyuzitie deepcopy()
-import os.path                  # na overenie platnosti (existencie) vstupneho suboru
+from random import randrange    # pre generovanie nahodnych hodnot z intervalov
+from numpy import uint8         # pre natypovanie buniek jedincov na uint8
+from copy import deepcopy       # na vytvaranie kopii vsetkych hodnot jedinca
+from os import path             # na overenie platnosti (existencie) vstupneho suboru
 
 NUM_OF_CELLS = 64               # pocet buniek jedinca
 # volitelne parametre:
@@ -256,7 +256,7 @@ while 1:
     elif answer == 'y':
         print('Zadajte nazov suboru s mapou (bez pripony)')
         answer = input()
-        if os.path.isfile('inputs\\' + answer + '.txt'):
+        if path.isfile('inputs\\' + answer + '.txt'):
             population.clear()
             best = Element()                                    # jedinec s najviac najvacim fitness
             grid = load_map(answer)                             # nacitanie udajov zo suboru do mapy
